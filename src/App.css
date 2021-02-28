@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+
+input {
+  width: 50%;
+}
+
+#chatInputContainer {
+  margin: 30px;
+}
+
+#messageWindow {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+ul {
+  list-style: none;
+}
+
+#connected {
+  color: green;
+}
+
+#disconnected {
+  color: red;
+}
+
+.message {
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.name{
+  text-align: left;
+  font-weight: bold;
+}
+
+.connectionMessage {
+  background-color: rgb(191, 191, 191);
+  margin: 7px auto;
+}
+
+.myMessages{
+  background-color: rgb(119, 238, 113);
+  margin-left: auto;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.externalMessages{
+  background-color: rgb(238, 204, 103);
+  margin-right: auto;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
