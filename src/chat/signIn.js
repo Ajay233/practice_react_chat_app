@@ -11,9 +11,13 @@ const SignIn = (props) => {
   }
 
   return(
-    <div id="signIn">
-      <input ref={input} placeholder='Enter your name'/>
-      <button onClick={() => setUserName()}>Save</button>
+    <div>
+      <div id="signIn">
+        <div id="mainTitle">Demo chat app</div>
+        <div>Enter the name you want displayed in the chat window:</div>
+        <input ref={input} placeholder='Enter your name'/>
+        <button onClick={() => setUserName()}>Save</button>
+      </div>
     </div>
   );
 }

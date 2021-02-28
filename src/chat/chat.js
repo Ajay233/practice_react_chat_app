@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Messages from './messages'
 import Typing from './typing'
-// const url = 'http://localhost:8090';
-const url = 'https://ajays-practice-web-server.herokuapp.com/'
 import io from 'socket.io-client'
+
+const url = 'https://ajays-practice-web-server.herokuapp.com/'
 let socket = '';
 
+// const url = 'http://localhost:8090';
 
 const Chat = (props) => {
 
@@ -90,7 +91,9 @@ const Chat = (props) => {
 
   return(
     <div id="chatInputContainer">
-      <div>Server connection status: {renderConnectionStatus()}</div>
+      <div id="connectionHeader">Server connection status: {renderConnectionStatus()}</div>
+      <button onClick={() => connect()}>Connect to server</button>
+      <button onClick={() => disconnect()}>Disconnect from server</button>
       <Messages messages={messages}/>
       <Typing usersTyping={usersTyping}/>
       <div>
@@ -98,8 +101,6 @@ const Chat = (props) => {
         <button onClick={() => sendMessage()}>Send</button>
         <button onClick={() => clearMessage()}>Clear message</button>
       </div>
-      <button onClick={() => connect()}>Connect to server</button>
-      <button onClick={() => disconnect()}>Disconnect from server</button>
     </div>
   );
 
