@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Messages from './messages'
 import Typing from './typing'
+// const url = 'http://localhost:8090';
+const url = 'https://ajays-practice-web-server.herokuapp.com/'
 import io from 'socket.io-client'
 let socket = '';
 
@@ -35,7 +37,7 @@ const Chat = (props) => {
 
   const connect = () => {
     // function for connecting to the server manually
-    socket = io('http://localhost:8090', {
+    socket = io(url, {
       withCredentials: true,
       extraHeaders: {
         "my-custom-header": "abcd"
