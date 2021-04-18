@@ -1,5 +1,13 @@
+html {
+  height: 100%;
+  /* background-color: rgba(70, 70, 70, 1); */
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(50, 50, 50, 1));
+}
+
 .App {
   text-align: center;
+  color: white;
+  /* background-color: rgba(70, 70, 70, 1) */
 }
 
 .App-logo {
@@ -46,29 +54,36 @@ input {
 }
 
 #messageWindow {
-  border: 1px solid black;
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
-  min-height: 50px;
+  height: 500px;
+  overflow-y: scroll;
+  background-image: linear-gradient(to bottom right, rgba(13, 130, 130, 1), rgba(13, 180, 180, 1));
+  color: black;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  margin-left: 10px;
 }
 
 #connected {
-  color: green;
+  color: rgba(171, 236, 171);
+  text-shadow: 0 0 5px rgba(171, 236, 171), 0 0 10px rgba(171, 236, 171), 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 55px green, 0 0 75px green;
 }
 
 #disconnected {
-  color: red;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
 }
 
 .message {
   padding: 5px 10px;
   border-radius: 10px;
   width: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .name{
@@ -79,6 +94,10 @@ ul {
 .connectionMessage {
   background-color: rgb(199, 199, 199);
   margin: 7px auto;
+  color: rgb(100, 100, 100);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-style: italic;
 }
 
 .myMessages{
@@ -96,24 +115,82 @@ ul {
   margin-bottom: 7px;
 }
 
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 400px;
+  margin-bottom: 30px;
+}
+
 #mainTitle{
+  padding: 30px;
   font-size: 40px;
   font-weight: bold;
 }
 
-#signIn{
-  margin: 30px auto;
+hr {
+  width: 90%;
+  margin: 20px auto;
+}
 
+#signInText{
+  margin: 20px auto;
+}
+
+#signIn{
+  margin: 20px auto;
 }
 
 button {
   margin: 0 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.button-normal {
+  /* background-color: rgba(0, 123, 225, 1); */
+  background-color: rgba(0, 0, 0, 0);
+  padding: 6px 12px;
+  color: orange;
+  margin: 5px 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  /* border-radius: 5px; */
+  border: 1px solid orange;
+}
+
+.button-normal:hover{
+  border: 1px solid rgba(225, 122, 24, 1);
+  font-weight: bold;
+  color: rgba(225, 122, 24, 1);
 }
 
 #connectionHeader{
   margin: 10px auto;
 }
 
-#chatInputContainer{
+.textInput {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 6px 12px;
+}
 
+#chatInputContainer{
+  width: 95%;
+  margin: 20px auto;
+}
+
+#chatInput {
+  width: 50%;
+}
+
+#send, #clear {
+  width: 15%;
+}
+
+.icon-medium{
+  font-size: 50px;
 }

@@ -4,7 +4,7 @@ const Typing = (props) => {
 
   const renderWhosTyping = () => {
     let whosTyping = props.usersTyping.map((user, i) => {
-      return <li key={i}>{user}</li>
+      return <li key={i}>{user.message}</li>
     })
     return whosTyping
   }
